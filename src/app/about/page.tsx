@@ -1,12 +1,13 @@
 import { db } from "@/db/db";
 import { users } from "@/db/schema";
+import Image from "next/image";
 
 const getUsers = async () => {
   const userData = await db.select().from(users);
   return userData;
 };
 
-export default async function Home() {
+export default async function About() {
   const userData = await getUsers();
   console.log("userData", userData);
   return (
@@ -19,3 +20,5 @@ export default async function Home() {
     </main>
   );
 }
+
+export const revalidate = 60;
