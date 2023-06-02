@@ -1,6 +1,5 @@
 import { db } from "@/db/db";
 import { users } from "@/db/schema";
-import Image from "next/image";
 
 const getUsers = async () => {
   const userData = await db.select().from(users);
@@ -21,4 +20,4 @@ export default async function About() {
   );
 }
 
-export const revalidate = 60;
+export const revalidate = 0;

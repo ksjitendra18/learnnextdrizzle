@@ -6,9 +6,10 @@ const getUsers = async () => {
   return userData;
 };
 
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
   const userData = await getUsers();
-  console.log("userData", userData);
   return (
     <main className="px-10 py-5">
       {userData?.map((user) => (
