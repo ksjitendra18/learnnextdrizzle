@@ -2,7 +2,7 @@
 import { User } from "@/db/schema";
 import React, { useEffect, useState } from "react";
 
-export default async function CC() {
+export default function CC() {
   const [userData, setuserData] = useState<User[]>([]);
   const userInfo = async () => {
     const res = await fetch("/api/get");

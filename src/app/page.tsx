@@ -7,7 +7,7 @@ const getUsers = async () => {
 };
 
 export const dynamic = "force-dynamic";
-
+export const runtime = "edge";
 export default async function Home() {
   const userData = await getUsers();
   return (

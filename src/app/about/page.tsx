@@ -21,3 +21,4 @@ export default async function About() {
 }
 
 export const revalidate = 0;
+export const runtime = "edge";
