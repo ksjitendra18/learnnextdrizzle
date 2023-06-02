@@ -6,8 +6,8 @@ export default async function CC() {
   const [userData, setuserData] = useState<User[]>([]);
   const userInfo = async () => {
     const res = await fetch("/api/get");
-    const { userData } = await res.json();
-
+    const { data } = await res.json();
+    const { userData } = data;
     console.log("user", userData);
     setuserData(userData);
   };

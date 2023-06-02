@@ -5,7 +5,7 @@ import { NextResponse } from "next/server";
 export async function GET(request: Request) {
   try {
     const userData = await db.select().from(users);
-    return NextResponse.json({ userData: userData });
+    return NextResponse.json({ success: true, data: { userData: userData } });
   } catch (error) {
     return NextResponse.json({
       success: false,
